@@ -1,10 +1,10 @@
 # Name 
 
-Class Photos
+Binary Search
 
 ## Type of Question
 
-Greedy Algorithms
+Searching Algorithms
 
 ## Difficulty
 
@@ -12,36 +12,88 @@ Easy
 
 ## Description
 
-It's photo day at the local school, and you're the photographer assigned to take class photos. The class that you'll be photographing has an even number of students, and all these students are wearing red or blue shirts. In fact, exactly half of the class is wearing red shirts, and the other half is wearing blue shirts. You're responsible for arranging the students in two rows before taking the photo. Each row should contain the same number of the students and should adhere to the following guidelines:
+Write a function that takes in a sorted array of integers as well as a target integer. The function should use the Binary Search algorithm to determine if the target integer is contained in the array and should return its index if it is, otherwise `-1`.
 
-* All students wearing red shirts must be in the same row.
+## Pre-requisites
 
-* All students wearing blue shirts must be in the same row.
+Binary Searh
 
-* Each student in the back row must be strictly taller than the student directly in front of them in the front row.
+* With Binary Search we first need a sorted array or an array that can be sorted. 
 
-You're given two input arrays: one containing the heights of all the students with red shirts and another one containing the heights of all students with blue shirts. These arrays will always have the same length, and each height will be a positive integer. Write a function that returns wheter or not a class photo that follows the stated guidelines can be taken.
+* The next step that you do is divide the array in half. Then you compare the value that is at the half way point of the array to the target number. If the value is greater than the  target number then you can completely eliminate the right half of the array and proceed with cutting the left half of the array in half (this is in cases where the list is in acending order). 
 
-Note: you can assume that each class has at least 2 students. 
+* If the value is less than the the target number then you can complettly eliminate the left half of the array and proceed with cutting the right half of the array in half (this is in cases where the list is in ascending order)
+
+* If the middle value of the right half of the array is greater than the targer then you move to the left. If it's less than the target you move to the right. 
+
+* If the middle value of the left half of the array is greater than the targer then you move to the left. If it's less than the target you move to the right.
+
+* You should continue this process of cutting the array until you reach your target number.
+
+Recursion
+
+* Calling the same function again until a base paramater is met. Meaning calling the function until a piece of your code breaks the function call. 
 
 ## How I approached the problem
 
-For this problem the first thing that you need to do is extract the main point from the problem. The main point in this problem is that there is a class and half of the classmates are wearing red shirts and the other half are wearing blue shirts.  They are scheduled to take class pictures. There are paramaters to the class photos, here they are: 
-
-* All students wearing red shirts must be in the same row 
-
-* All students wearing blue shirts must be in the same row
-
-* Each student in the back row must be taller than students directly in front of them in the front row
-
-The best way to approach this problem is iterably.
-
-The first step you do is sort the two arrays you are given for the heights of redshirt students and the heights of blueshirt students. 
-
-Create a variable to store the sorted arrays for me I created a red_sort and blue_sort variable. Then you need to create a variable that stores a value for either RED or BLUE depending on the instructions. I created a last_row variable that states:
+For this problem I created was a function that takes in an array and a target:
 
 ```python
-last_row = "RED" if red_sort[0] > blue_sort[0] else "BLUE" 
-``` 
+def binarySearch(array, target):
+    pass
+```
 
-What this variable pretty much states that if the first index value of red shirted students is greater than the value of the first index of blue shirted student we know that the last row should be red because all red students need to be in the same row. The next step that I did was iterate through the red_sort array and assign variables to values in the red_sort array and the blue_sort array. Now the next step is to check the last_row. One thing we know is if the last_row is RED then no value in red can be less than or equal to blue. If that is the case then they do not qualify for a class photo. Same thing goes for Blue if the last row is equal to Blue then no value of red can be greater than blue and no value of blue can be less than red if that's the case then they do not qualify for a class photo. Other than that you can return True for any other situation. And there you go that is the solution.   
+The second step was to find a way to cut this initial input array in half to traverse it to find the target number. So I created a helperfunction
+
+```python
+def binarySearchHelper(array, target, left, right):
+    pass
+```
+
+* This function is suppose to take the initial array and target and also have a left and right value. The left value to start will be 0 and the right value will be the `len(array) - 1`
+
+The third step was to create a mid variable that would add up the index value of the left variable and the right variable and then return the integer value of that number:
+
+```python
+mid = (left + right) // 2
+```
+
+The fourth step was to create a while loop so the function continues traversing the array until a condition is met and it will only stop until a base condition is met.
+
+```python
+while left <= right:
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+		    return binarySearchHelper(array, target, mid + 1, right)
+        elif array[mid] > target:
+		    return binarySearchHelper(array, target, left, mid - 1)
+```
+
+* This function will continue traversing the array as long as the left value <= to the right value and if the middle value of the array is equal to the target number it will return that number. If not then if the the middle number in the array is less than the target then it will call the binarySearchHelper function again except the left value will be mid index +  1. If the array middle value is greater than the target value it will call the binarySearchHelper function except the right index value will be mid -1. It will continue calling the function until the base case is reached which is `if array[mid] == target: return mid`
+
+
+If the target number is not in the array then it will `return -1`
+
+The last step is to return the results of the binarySearchHelper in the initial binarySearch function. Your final code should look like this:
+
+```python
+def binarySearch(array, target):
+    # Write your code here.
+    return binarySearchHelper(array, target, 0, len(array) -1)
+    
+	
+	
+	
+	
+def binarySearchHelper(array, target, left, right):
+	mid = (left + right) // 2
+	while left <= right:
+        if array[mid] == target:
+            return mid
+        elif array[mid] < target:
+		    return binarySearchHelper(array, target, mid + 1, right)
+        elif array[mid] > target:
+		    return binarySearchHelper(array, target, left, mid - 1)
+    return -1
+```
