@@ -16,7 +16,7 @@ Write a function that takes in a sorted array of integers as well as a target in
 
 ## Pre-requisites
 
-Binary Searh
+Binary Search
 
 * With Binary Search we first need a sorted array or an array that can be sorted. 
 
