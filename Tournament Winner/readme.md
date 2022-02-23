@@ -6,7 +6,7 @@ Tournament Winner
 
 Array
 
-## Diffictulty
+## Difficulty
 
 Easy
 

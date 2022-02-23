@@ -6,7 +6,7 @@ Nth Fibonacci
 
 Recursion
 
-## Diffictulty
+## Difficulty
 
 Easy
 

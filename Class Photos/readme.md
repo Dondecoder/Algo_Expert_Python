@@ -6,7 +6,7 @@ Class Photos
 
 Greedy Algorithms
 
-## Diffictulty
+## Difficulty
 
 Easy
 

@@ -6,7 +6,7 @@ Node Depths
 
 Binary Tree
 
-## Diffictulty
+## Difficulty
 
 Easy
 
