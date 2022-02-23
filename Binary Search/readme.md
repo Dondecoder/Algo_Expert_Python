@@ -36,7 +36,7 @@ Recursion
 
 ## How I approached the problem
 
-For this problem I created was a function that takes in an array and a target:
+For this problem I created a function that takes in an array and a target:
 
 ```python
 def binarySearch(array, target):
