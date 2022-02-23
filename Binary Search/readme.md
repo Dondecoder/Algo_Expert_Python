@@ -10,10 +10,6 @@ Searching Algorithms
 
 Easy
 
-## Description
-
-Write a function that takes in a sorted array of integers as well as a target integer. The function should use the Binary Search algorithm to determine if the target integer is contained in the array and should return its index if it is, otherwise `-1`.
-
 ## Pre-requisites
 
 Binary Search
@@ -33,6 +29,10 @@ Binary Search
 Recursion
 
 * Calling the same function again until a base paramater is met. Meaning calling the function until a piece of your code breaks the function call. 
+
+## Description
+
+Write a function that takes in a sorted array of integers as well as a target integer. The function should use the Binary Search algorithm to determine if the target integer is contained in the array and should return its index if it is, otherwise `-1`.
 
 ## How I approached the problem
 
