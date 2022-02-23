@@ -21,9 +21,13 @@ All students wearing
 For this problem the first thing that you need to do is extract the main point from the problem. The main point in this problem is that there is a class and half of the classmates are wearing red shirts and the other half are wearing blue shirts.  They are scheduled to take class pictures. There are paramaters to the class photos, here they are: 
 
 All students wearing red shirts must be in the same row 
+
 All students wearing blue shirts must be in the same row
+
 Each student in the back row must be taller than students directly in front of them in the front row
+
 The best way to approach this problem is iterably.
+
 The first step you do is sort the two arrays you are given for the heights of redshirt students and the heights of blueshirt students. 
 
 Create a variable to store the sorted arrays for me I created a red_sort and blue_sort variable. Then you need to create a variable that stores a value for either RED or BLUE depending on the instructions. I created a last_row variable that states:
