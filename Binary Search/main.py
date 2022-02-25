@@ -16,4 +16,3 @@ def binarySearchHelper(array, target, left, right):
         elif array[mid] > target:
             return binarySearchHelper(array, target, left, mid - 1)
     return -1
-	
