@@ -10,6 +10,10 @@ Greedy Algorithms
 
 Easy
 
+## Pre-requisites
+
+
+
 ## Description
 
 A tandem bicycle is a bicycle that's operated by two people: person A and person B. Both people pedal the bicycle, but the person that pedals faster dictates the speed of the bicycle. So if person A pedals at a speed of `5`, and person B pedals at a speed of `4`, the tandem bicycle moves at a speed of 5 (i.e., `tandemSpeed = max(speedA, speedB)`).
@@ -21,5 +25,6 @@ Write a function that returns the maximum possible total speed or the minimum po
 "Total Speed" is defined as the sum of the speeds of all the tandem bicycles being ridden. For example, if there are 4 riders (2 red-shirt riders and 2 blue-shirt riders) who have a speed of `1,3,4,5`, and if they're paired on tandem bicycles as follows: `[1,4], [5,3]`, then the total speed of these tandem bicycles is `4 + 5 = 9`
 
 ## How I approached the problem
+Will Review Tomorrow
 
 
