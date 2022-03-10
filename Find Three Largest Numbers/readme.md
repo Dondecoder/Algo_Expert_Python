@@ -20,7 +20,7 @@ Arrays
 
 Write a function that takes in an aray of at least three integers and, without sorting the input array, return a sorted array of the three largest intgers in the input array. 
 
-The function shoul return duplicate integers if necessary; for example, it should return `[10,10,12]` for an input array of `[10,5,9,10,12]`. 
+The function should return duplicate integers if necessary; for example, it should return `[10,10,12]` for an input array of `[10,5,9,10,12]`. 
 
 ## How I approached the problem
 

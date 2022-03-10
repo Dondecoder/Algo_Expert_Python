@@ -7,7 +7,7 @@ def runlineEncoding(string):
         currentCharacter = string[i]
         previousCharacter = string[i -1]
 
-        if currentCharacter != previousCharacter or currentCharacter == 9:
+        if currentCharacter != previousCharacter or currentRunLength == 9:
             encodedStringCharacters.append(str(currentRunLength))
             encodedStringCharacters.append(str(previousCharacter))
             currentRunLength = 0
