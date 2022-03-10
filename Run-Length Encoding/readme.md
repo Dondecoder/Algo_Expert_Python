@@ -62,7 +62,7 @@ To make things more complecate, however, the input sting can contain all sorts o
 
     ```python
     encodedStringCharacters.append(str(currentRunLength))
-    encodedStringCharacters.append(str(len(string) - 1))
+    encodedStringCharacters.append(string[len(string) - 1])
     ```
 
 ### Step 5 

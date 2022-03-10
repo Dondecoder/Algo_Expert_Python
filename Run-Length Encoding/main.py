@@ -15,6 +15,6 @@ def runlineEncoding(string):
         currentRunLength += 1
 
     encodedStringCharacters.append(str(currentRunLength))
-    encodedStringCharacters.append(str(len(string) - 1))
+    encodedStringCharacters.append(string[len(string) - 1])
 
     return "".join(encodedStringCharacters)
