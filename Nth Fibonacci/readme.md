@@ -19,3 +19,6 @@ Important note: the Fibonacci sequence is often defined with its first two numbe
 ## How I approached the problem
 
 To solve this problem recursively we have to find which will be the nth in the Fibonacci sequence in order to do that we have to write a function. The Nth number is equal to the sum of: `(n-1) and (n-2)`. Each node needs to be put through the recurssive formula the solution for this is very simple in understanding as long as you go through each step in the recursive solution. 
+
+## Times Completed
+Twice
